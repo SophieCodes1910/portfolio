@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the first slide
     showSlide(currentIndex);
 
-    // Optional: Auto-slide every 10 seconds
-    setInterval(nextSlide, 10000);
+
+
 });
 
 
