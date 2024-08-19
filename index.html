@@ -89,33 +89,6 @@
             <p>LinkedIn: <a href="https://www.linkedin.com/in/sophie-mcalavey-0b6870291/" target="_blank">linkedin.com/in/sophie-mcalavey</a></p>
         </div>
     </footer>
-    <script>
-        // Carousel functionality
-        let index = 0;
-
-        function showSlide(n) {
-            const slides = document.querySelectorAll('.carousel-item');
-            if (n >= slides.length) index = 0;
-            if (n < 0) index = slides.length - 1;
-
-            slides.forEach((slide, i) => {
-                slide.style.display = i === index ? 'block' : 'none';
-            });
-        }
-
-        function prevSlide() {
-            showSlide(--index);
-        }
-
-        function nextSlide() {
-            showSlide(++index);
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            showSlide(index);
-
-        });
-    </script>
 </body>
 </html>
 
