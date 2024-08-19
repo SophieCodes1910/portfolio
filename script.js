@@ -31,20 +31,21 @@ showSlide(currentIndex);
 // Optional: Auto-slide every 5 seconds
 setInterval(nextSlide, 5000);
 
-// Initialize EmailJS
-emailjs.init('gECsT5O4gQUSEfSL6'); // Ensure this is your correct public User ID
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize EmailJS
+    emailjs.init('gECsT5O4gQUSEfSL6'); // Replace with your actual EmailJS public user ID
 
-// Add event listener for form submission
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
 
-    // Send form data using EmailJS
-    emailjs.sendForm('service_gbl8bhj', '6gbewll', this)
-        .then(function(response) {
-            alert('Message sent successfully!');
-            document.getElementById('contact-form').reset(); // Reset the form fields
-        }, function(error) {
-            alert('Failed to send message. Please try again.');
-            console.error('EmailJS error:', error); // Log detailed error
-        });
+        emailjs.sendForm('service_gbl8bhj', '6gbewll', this) // Replace 'service_gbl8bhj' with your service ID and '6gbewll' with your template ID
+            .then(function(response) {
+                alert('Message sent successfully!');
+                document.getElementById('contact-form').reset(); // Reset the form fields
+            }, function(error) {
+                alert('Failed to send message. Please try again.');
+                console.error('EmailJS error:', error); // Log detailed error
+            });
+    });
 });
+
