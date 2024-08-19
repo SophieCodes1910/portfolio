@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophie's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Josefin+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="title">Sophie</h1>
+            <p class="intro">I'm Sophie, a dedicated Web Developer and Software Engineer from Cork, Ireland. Specializing in dynamic web development with HTML, CSS, JavaScript, and Flask. I bring passion and a keenness to learn new things to every project. Let's create something amazing together!</p>
+            <a href="#contact" class="contact-button">Get in Touch</a>
+        </div>
+    </header>
+    <section class="portfolio">
+        <h2 class="section-title">My Work</h2>
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/ai-pdf-summarizer.png" alt="AI PDF Summarizer">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3>Project 1: AI PDF Summarizer</h3>
+                        <p>I built a PDF summarizer using Python and the GPT API. It extracts text from PDFs and uses GPT to create concise summaries, giving users a clear overview of the document’s key points.</p>
+                        <p><strong>Skills:</strong> Python, API integration</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/budget_planner.png" alt="Budget Planner">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3>Project 2: Budget Planner</h3>
+                        <p>A tool for managing personal finances and tracking expenses.</p>
+                        <p><strong>Skills:</strong> HTML, CSS, JavaScript</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="images/databases.png" alt="Task Manager">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3>Project 3: Library Database</h3>
+                        <p>I developed a SQL database for a college project that organizes books by author, genre, year of publication, and a unique code. This database allows for easy sorting, searching, and retrieval of books based on these criteria, making it efficient for managing a large collection.</p>
+                        <p><strong>Skills:</strong> SQL</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </section>
+    <footer id="contact" class="footer">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-section">
+            <form class="contact-form" action="mailto:s.mcalavey5@gmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+            <div class="fiverr-link">
+                <p>Or check out my Fiverr profile</p>
+                <a href="https://fiverr.com/sophie" target="_blank">
+                    <img src="images/fiverr.png" alt="Fiverr Icon" class="fiverr-icon">
+                </a>
+            </div>
+        </div>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:s.mcalavey5@gmail.com">s.mcalavey5@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/sophie-mcalavey-0b6870291/" target="_blank">linkedin.com/in/sophie-mcalavey</a></p>
+        </div>
+    </footer>
+</body>
+</html>
+
