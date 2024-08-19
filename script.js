@@ -37,7 +37,7 @@ emailjs.init('your_user_id'); // Replace 'your_user_id' with your actual EmailJS
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
 
-    emailjs.sendForm('your_service_id', 'your_template_id', this)
+    emailjs.sendForm('service_gbl8bhj', '6gbewll', this)
         .then(function(response) {
             alert('Message sent successfully!');
             document.getElementById('contact-form').reset(); // Reset the form fields
