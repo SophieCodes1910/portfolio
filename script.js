@@ -32,16 +32,19 @@ showSlide(currentIndex);
 setInterval(nextSlide, 5000);
 
 // Initialize EmailJS
-emailjs.init('gECsT5O4gQUSEfSL6'); // Replace 'your_user_id' with your actual EmailJS user ID
+emailjs.init('gECsT5O4gQUSEfSL6'); // Ensure this is your correct public User ID
 
+// Add event listener for form submission
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
 
+    // Send form data using EmailJS
     emailjs.sendForm('service_gbl8bhj', '6gbewll', this)
         .then(function(response) {
             alert('Message sent successfully!');
             document.getElementById('contact-form').reset(); // Reset the form fields
         }, function(error) {
             alert('Failed to send message. Please try again.');
+            console.error('EmailJS error:', error); // Log detailed error
         });
 });
