@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the default form submission
 
-        emailjs.sendForm('service_gbl8bhj', '6gbewll', this) // Replace 'service_gbl8bhj' with your service ID and '6gbewll' with your template ID
+        emailjs.sendForm('service_gbl8bhj', '6gbewll', this) // Replace with your service ID and template ID
             .then(function(response) {
                 alert('Message sent successfully!');
                 document.getElementById('contact-form').reset(); // Reset the form fields
@@ -45,8 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the first slide
     showSlide(currentIndex);
 
-    // Optional: Auto-slide every 5 seconds
-    setInterval(nextSlide, 5000);
+    // Optional: Auto-slide every 10 seconds
+    setInterval(nextSlide, 10000);
 });
+
 
 
