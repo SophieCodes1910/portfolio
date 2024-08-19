@@ -32,7 +32,7 @@ showSlide(currentIndex);
 setInterval(nextSlide, 5000);
 
 // Initialize EmailJS
-emailjs.init('your_user_id'); // Replace 'your_user_id' with your actual EmailJS user ID
+emailjs.init('gECsT5O4gQUSEfSL6'); // Replace 'your_user_id' with your actual EmailJS user ID
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the default form submission
