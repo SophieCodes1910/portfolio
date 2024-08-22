@@ -114,8 +114,8 @@ body::before {
 }
 
 .carousel-image {
-    flex: 1;
-    max-width: 50%;
+    flex: 1.5;  /* Increase flex value to make the image box longer */
+    max-width: 65%;  /* Adjust the max width for a longer image box */
     height: 100%;
     padding-right: 20px;
     display: flex;
@@ -130,7 +130,7 @@ body::before {
 }
 
 .carousel-caption {
-    flex: 1;
+    flex: 1;  /* Reduce flex value for the caption */
     padding-left: 20px;
     background: rgba(0, 0, 0, 0.5);
     color: white;
@@ -177,6 +177,7 @@ body::before {
 .carousel-control.next {
     right: 10px;
 }
+
 
 
 
