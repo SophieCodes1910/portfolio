@@ -89,7 +89,7 @@ body::before {
     max-width: 1000px; /* Increased width */
     height: 600px; /* Increased height */
     margin: 0 auto;
-    overflow: hidden;
+    overflow: auto;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     background: rgba(0, 0, 0, 0.4); /* Less visible background */
