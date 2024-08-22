@@ -114,8 +114,8 @@ body::before {
 }
 
 .carousel-image {
-    flex: 2;  /* Increase the flex value for the image */
-    max-width: 65%;  /* Set max width to ensure proper scaling */
+    flex: 3;  /* Increase the flex value for the image */
+    max-width: 55%;  /* Set max width to ensure proper scaling */
     height: 100%;
     padding-right: 20px;
     display: flex;
