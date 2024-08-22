@@ -86,65 +86,73 @@ body::before {
 /* Carousel Styling */
 .carousel {
     position: relative;
-    max-width: 1000px; /* Increased width */
-    height: 600px; /* Increased height */
+    max-width: 1000px;
+    height: 600px;
     margin: 0 auto;
-    overflow: hidden; /* Hide overflow to prevent scrollbars */
+    overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    background: rgba(0, 0, 0, 0.4); /* Less visible background */
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .carousel-container {
     display: flex;
-    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.5, 1); /* Smoother transition */
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.5, 1);
+    height: 100%;
 }
 
 .carousel-item {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     min-width: 100%;
     box-sizing: border-box;
     padding: 20px;
     background: rgba(0, 0, 0, 0.5);
-    height: auto; /* Auto height to fit content */
+    height: 100%;
 }
 
 .carousel-image {
     flex: 1;
+    max-width: 50%;
+    height: 100%;
     padding-right: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .carousel-image img {
-    padding-top: 25px;
     max-width: 100%;
-    height: auto;
+    max-height: 100%;
     object-fit: cover;
     border-radius: 8px;
-    height: 100%; /* Ensure image fills container height */
 }
 
 .carousel-caption {
     flex: 1;
     padding-left: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Less opaque background */
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     text-align: left;
     border-radius: 8px;
-    overflow: hidden; /* Hide overflow content */
-    word-wrap: break-word; /* Ensure long words break to prevent overflow */
+    overflow: hidden;
+    word-wrap: break-word;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .carousel-caption h3 {
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 2rem; /* Larger heading */
+    font-size: 2rem;
 }
 
 .carousel-caption p {
     margin-bottom: 10px;
-    font-size: 1.6rem; /* Larger paragraph text */
+    font-size: 1.6rem;
 }
 
 /* Carousel Control Styling */
@@ -155,9 +163,9 @@ body::before {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 15px; /* Larger padding */
+    padding: 15px;
     cursor: pointer;
-    font-size: 2rem; /* Larger controls */
+    font-size: 2rem;
     border-radius: 50%;
     z-index: 1000;
 }
@@ -169,6 +177,7 @@ body::before {
 .carousel-control.next {
     right: 10px;
 }
+
 
 
 /* Footer Section Styling */
