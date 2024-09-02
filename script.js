@@ -2,52 +2,46 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize EmailJS
     emailjs.init('gECsT5O4gQUSEfSL6'); // Replace with your actual EmailJS public user ID
 
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
 
-        emailjs.sendForm('service_gbl8bhj', '6gbewll', this) // Replace with your service ID and template ID
-            .then(function(response) {
+        emailjs.sendForm('service_gbl8bhj', '6gbewll', form) // Replace with your service ID and template ID
+            .then(() => {
                 alert('Message sent successfully!');
-                document.getElementById('contact-form').reset(); // Reset the form fields
-            }, function(error) {
+                form.reset(); 
+            }, (error) => {
                 alert('Failed to send message. Please try again.');
-                console.error('EmailJS error:', error); // Log detailed error
+                console.error('EmailJS error:', error); 
             });
     });
 
-    // Carousel functionality
+    // Carousel Functionality
+    const slides = document.querySelectorAll('.carousel-item');
+    const nextButton = document.querySelector('.next');
+    const prevButton = document.querySelector('.prev');
     let currentIndex = 0;
-    const items = document.querySelectorAll('.carousel-item');
-    const totalItems = items.length;
 
-    function showSlide(index) {
-        if (index >= totalItems) {
-            currentIndex = 0; // Wrap around to the first item
-        } else if (index < 0) {
-            currentIndex = totalItems - 1; // Wrap around to the last item
-        } else {
-            currentIndex = index;
-        }
+    const showSlide = (index) => {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+        });
+    };
 
-        // Move carousel
-        const offset = -currentIndex * 100;
-        document.querySelector('.carousel-container').style.transform = `translateX(${offset}%)`;
-    }
+    nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    });
 
-    function nextSlide() {
-        showSlide(currentIndex + 1);
-    }
-
-    function prevSlide() {
-        showSlide(currentIndex - 1);
-    }
+    prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+    });
 
     // Initialize the first slide
     showSlide(currentIndex);
-
-
-
 });
+
 
 
 
