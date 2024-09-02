@@ -11,9 +11,12 @@ body {
     background: linear-gradient(135deg, #ff7eb9, #ff65a3, #7afcff, #feff9c);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
-    color: #fff;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    position: relative;
+    position: relative; /* Add relative positioning for the overlay */
 }
 
 /* Background Overlay */
@@ -24,15 +27,16 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    z-index: -1; /* Place behind the content */
 }
 
 /* Header Styling */
 .header {
     width: 100%;
     padding: 100px 20px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Darker background for header */
+    position: relative; /* Ensure header content is positioned correctly */
 }
 
 .header-content {
@@ -42,25 +46,25 @@ body::before {
 
 .title {
     font-family: 'Cutive Mono', monospace;
-    font-size: 4rem;
+    font-size: 4rem; /* Larger title */
     margin-bottom: 20px;
 }
 
 .intro {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Larger intro text */
     margin-bottom: 40px;
     line-height: 1.6;
 }
 
 .contact-button {
     text-decoration: none;
-    padding: 15px 30px;
+    padding: 15px 30px; /* Larger button */
     background-color: #7afcff;
-    color: #333;
+    color: #333333;
     font-weight: bold;
     border-radius: 5px;
-    font-size: 1.2rem;
     transition: background-color 0.3s ease;
+    font-size: 1.2rem; /* Larger font size */
 }
 
 .contact-button:hover {
@@ -71,29 +75,29 @@ body::before {
 .portfolio {
     width: 100%;
     padding: 60px 20px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); /* Darker background for portfolio */
 }
 
 .section-title {
-    font-size: 3rem;
+    font-size: 3rem; /* Larger section title */
     margin-bottom: 40px;
 }
 
 /* Carousel Styling */
 .carousel {
     position: relative;
-    max-width: 1000px;
-    height: 600px;
+    max-width: 1000px; /* Increased width */
+    height: 600px; /* Increased height */
     margin: 0 auto;
     overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    background: #333; /* Darker background for better contrast */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4); /* Less visible background */
 }
 
 .carousel-container {
     display: flex;
-    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.5, 1);
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.5, 1); /* Smoother transition */
 }
 
 .carousel-item {
@@ -101,9 +105,10 @@ body::before {
     align-items: center;
     justify-content: space-between;
     min-width: 100%;
+    box-sizing: border-box;
     padding: 20px;
     background: rgba(0, 0, 0, 0.5);
-    height: 100%;
+    height: 100%; /* Ensure items fill the carousel height */
 }
 
 .carousel-image {
@@ -116,31 +121,30 @@ body::before {
     max-width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    height: 100%; /* Ensure image fills container height */
 }
 
 .carousel-caption {
+    
     flex: 1;
     padding-left: 20px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5); /* Less opaque background */
     color: white;
     text-align: left;
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 8px;
 }
 
 .carousel-caption h3 {
     margin-top: 10px;
-    margin-bottom: 15px;
-    font-size: 2rem;
-    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 2rem; /* Larger heading */
 }
 
 .carousel-caption p {
+
     margin-bottom: 10px;
-    font-size: 1.4rem;
-    line-height: 1.6;
+    font-size: 1.6rem; /* Larger paragraph text */
 }
 
 /* Carousel Control Styling */
@@ -148,15 +152,14 @@ body::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 15px;
+    padding: 15px; /* Larger padding */
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 2rem; /* Larger controls */
     border-radius: 50%;
     z-index: 1000;
-    transition: background-color 0.3s ease;
 }
 
 .carousel-control.prev {
@@ -167,18 +170,13 @@ body::before {
     right: 10px;
 }
 
-.carousel-control:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
 /* Footer Section Styling */
 .footer {
     width: 100%;
     padding: 60px 20px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5); /* Darker background for footer */
 }
 
-/* Contact Form Styling */
 .contact-section {
     display: flex;
     flex-direction: row;
@@ -188,38 +186,32 @@ body::before {
     margin: 0 auto;
 }
 
+/* Contact Form Styling */
 .contact-form {
     flex: 1;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.6); /* Darker background for form */
+    padding: 30px; /* Larger padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Larger margin for form groups */
 }
 
 label {
     display: block;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #fff;
+    font-size: 1.2rem; /* Larger label text */
+    margin-bottom: 5px;
 }
 
 input, textarea {
     width: 100%;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 15px; /* Larger padding */
+    border-radius: 4px;
     border: 1px solid #ccc;
-    background-color: rgba(255, 255, 255, 0.9);
-    font-size: 1.1rem;
-    transition: border-color 0.3s ease;
-}
-
-input:focus, textarea:focus {
-    border-color: #7afcff;
-    outline: none;
+    background-color: #ffffff;
+    font-size: 1.1rem; /* Larger font size */
 }
 
 textarea {
@@ -229,21 +221,16 @@ textarea {
 .submit-button {
     background-color: #7afcff;
     border: none;
-    color: #333;
-    padding: 15px 30px;
-    border-radius: 10px;
-    font-size: 1.2rem;
+    color: #333333;
+    padding: 15px 30px; /* Larger button */
+    border-radius: 5px;
+    font-size: 1.1rem; /* Larger font size */
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
     background-color: #ff7eb9;
-    transform: translateY(-2px);
-}
-
-.submit-button:active {
-    transform: translateY(0);
 }
 
 /* Fiverr Link Styling */
@@ -252,17 +239,17 @@ textarea {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 30px;
+    margin-left: 30px; /* Increased margin for better spacing */
 }
 
 .fiverr-link p {
-    margin-bottom: 15px;
-    font-size: 1.5rem;
+    margin-bottom: 15px; /* Larger margin for the text */
+    font-size: 1.5rem; /* Larger font size */
 }
 
 .fiverr-icon {
-    width: 80%;
-    max-width: 180px;
+    width: 80%; /* Slightly larger size of the icon */
+    max-width: 180px; /* Maximum size constraint */
     height: auto;
 }
 
@@ -288,5 +275,6 @@ textarea {
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
 }
+
 
 
