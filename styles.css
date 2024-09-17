@@ -117,6 +117,7 @@ body::before {
 
 .carousel-caption {
     margin-top: 20px;
+    margin-bottom: 50px;
     color: white;
     text-align: center;
     padding: 20px; 
