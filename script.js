@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize EmailJS
-    emailjs.init('gECsT5O4gQUSEfSL6'); // Replace with your actual EmailJS public user ID
+    emailjs.init('gECsT5O4gQUSEfSL6'); 
 
     const form = document.getElementById('contact-form');
     form.addEventListener('submit', (event) => {
         event.preventDefault();
 
-        emailjs.sendForm('service_gbl8bhj', '6gbewll', form) // Replace with your service ID and template ID
+        emailjs.sendForm('service_gbl8bhj', '6gbewll', form) 
             .then(() => {
                 alert('Message sent successfully!');
                 form.reset(); 
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const showSlide = (index) => {
         slides.forEach((slide, i) => {
-            slide.style.display = i === index ? 'block' : 'none';
+            slide.style.display = i === index ? 'flex' : 'none'; 
         });
     };
 
