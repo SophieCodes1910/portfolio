@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         emailjs.send('service_gbl8bhj', 'template_6gbewll', params)
             .then(() => {
-                alert('Message sent successfully!');
+                alert('Email Sent!!');  // Alert after successful sending
                 form.reset(); // Clear the form after successful submission
             })
             .catch((error) => {
@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the first slide
     showSlide(currentIndex);
 });
+
 
 
 
