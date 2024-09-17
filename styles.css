@@ -97,7 +97,8 @@ body::before {
 
 .carousel-container {
     display: flex;
-    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.5, 1); /* Smoother transition */
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.5, 1);
+    padding:200px;
 }
 
 .carousel-item {
@@ -108,7 +109,7 @@ body::before {
     box-sizing: border-box;
     padding: 20px;
     background: rgba(0, 0, 0, 0.5);
-    height: 100%; /* Ensure items fill the carousel height */
+    height: 100%; 
 }
 
 .carousel-image {
