@@ -98,7 +98,7 @@ body::before {
 .carousel-container {
     display: flex;
     transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.5, 1);
-    padding:175px;
+    padding:200px;
 }
 
 .carousel-item {
