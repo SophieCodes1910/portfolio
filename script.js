@@ -1,23 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize EmailJS
-    emailjs.init('gECsT5O4gQUSEfSL6');
+    emailjs.init('gECsT5O4gQUSEfSL6');  // Ensure this is your actual EmailJS User ID
 
     const form = document.getElementById('contact-form');
     const submitButton = document.querySelector('.submit-button');
 
-    submitButton.addEventListener('click', () => {
-        // Prevent form from submitting the default way
-        event.preventDefault(); 
+    const sendMail = () => {
+        const params = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value
+        };
 
-        // Make sure you're using the correct service and template ID from EmailJS
-        emailjs.sendForm('service_gbl8bhj', 'template_6gbewll', form)
+        emailjs.send('service_gbl8bhj', 'template_6gbewll', params)
             .then(() => {
                 alert('Message sent successfully!');
                 form.reset(); // Clear the form after successful submission
-            }, (error) => {
+            })
+            .catch((error) => {
                 alert('Failed to send message. Please try again.');
                 console.error('EmailJS error:', error);  // Log any errors for debugging
             });
+    };
+
+    submitButton.addEventListener('click', (event) => {
+        event.preventDefault();  // Prevent default button action
+        sendMail();  // Call the sendMail function
     });
 
     // Carousel functionality
