@@ -113,6 +113,7 @@ body::before {
     box-sizing: border-box;
     padding: 40px;
     height: 550px; 
+    margin:100px;
 }
 
 .carousel-caption {
