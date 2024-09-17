@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize EmailJS
     emailjs.init('gECsT5O4gQUSEfSL6');  // Ensure this is your actual EmailJS User ID
 
+    // Form Handling
     const form = document.getElementById('contact-form');
     const submitButton = document.querySelector('.submit-button');
 
