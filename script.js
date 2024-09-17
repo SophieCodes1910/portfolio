@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize EmailJS
-    emailjs.init('gECsT5O4gQUSEfSL6');  // Replace with your actual EmailJS User ID
+    emailjs.init('gECsT5O4gQUSEfSL6');  // Ensure this is your actual EmailJS User ID
 
     const form = document.getElementById('contact-form');
     const submitButton = document.querySelector('.submit-button');
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         emailjs.send('service_gbl8bhj', 'template_6gbewll', params)
             .then(() => {
-                alert('Email Sent!!');  // Alert after successful sending
+                alert('Message sent successfully!');
                 form.reset(); // Clear the form after successful submission
             })
             .catch((error) => {
@@ -27,8 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();  // Prevent default button action
         sendMail();  // Call the sendMail function
     });
-});
-
 
     // Carousel functionality
     const slides = document.querySelectorAll('.carousel-item');
@@ -55,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize the first slide
     showSlide(currentIndex);
 });
+
 
 
 
