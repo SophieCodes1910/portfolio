@@ -12,8 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
             message: document.getElementById('message').value
         };
 
-        emailjs.send('service_gbl8bhj', 'template_6gbewll', params).then(alert("Email Sent!!"));
+        emailjs.send('service_gbl8bhj', 'template_6gbewll', params)
             .then(() => {
+                alert('Email Sent!!');  // Alert after successful sending
                 form.reset(); // Clear the form after successful submission
             })
             .catch((error) => {
