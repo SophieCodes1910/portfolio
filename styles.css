@@ -130,7 +130,7 @@ body::before {
 .carousel-caption {
     flex: 1;
     color: white;
-    text-align: left;
+    text-align: right;
     padding-left: 20px;
 }
 
